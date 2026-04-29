@@ -109,6 +109,9 @@ CREATE TABLE delivery_status_logs (
 
 ````
 ### 2. Diagramme de classes 
+
+<img width="729" height="413" alt="diagramme_classe" src="https://github.com/user-attachments/assets/f20f406c-f5fa-4520-82ff-a3c03de61fe6" />
+
 ---
 
 ## Demonstaration 
