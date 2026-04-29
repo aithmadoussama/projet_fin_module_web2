@@ -1,4 +1,4 @@
-# 📦 LocalTrack Delivery - Système de Suivi de Livraison Locale
+# 📦 Campus Delivery - Système de Suivi de Livraison Locale
 
 <img width="1408" height="768" alt="icon" src="https://github.com/user-attachments/assets/427047a5-4cb4-4c23-852d-d55d8a2095ec" />
 
@@ -115,20 +115,7 @@ CREATE TABLE delivery_status_logs (
 ---
 
 ## Demonstaration 
-
+### Partie *admin*
+https://github.com/user-attachments/assets/1bcb3ef2-2def-4b79-9573-68e1433060ad
 
 ---
-
-## ⚙️ Installation & Configuration
-
-### Prérequis
-- Serveur local (XAMPP / WAMP).
-- Node.js (pour le projet React).
-- Android Studio.
-
-### Étapes
-1. **Backend :** Importez le fichier `.sql` dans votre base de données MySQL et placez le dossier API dans `htdocs`.
-2. **Web :** ```bash
-   cd web-admin
-   npm install
-   npm start
