@@ -1,0 +1,249 @@
+/* Logo Container and Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Logo Image */
+.logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.3s ease;
+    filter: brightness(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+}
+
+.logo-img:hover {
+    transform: scale(1.1) translateY(-2px);
+    filter: brightness(0.95) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+}
+
+.logo-img:active {
+    transform: scale(0.98);
+}
+
+/* Logo Text/Name */
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-text:hover {
+    color: #334155;
+}
+
+/* Small/Icon Logo Variant */
+.logo-img-small {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.2s ease;
+    filter: brightness(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
+    cursor: pointer;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img-small:hover {
+    transform: scale(1.12);
+    filter: brightness(0.9) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-img-small:active {
+    transform: scale(0.95);
+}
+
+/* Large/Hero Logo Variant */
+.logo-img-large {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: brightness(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+    cursor: pointer;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
+    padding: 8px;
+    display: block;
+}
+
+.logo-img-large:hover {
+    transform: scale(1.08) translateY(-4px);
+    filter: brightness(0.98) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+}
+
+.logo-img-large:active {
+    transform: scale(0.96);
+}
+
+/* Logo with Background Circle */
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo-circle:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.logo-circle img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.2s ease;
+}
+
+.logo-circle:hover img {
+    transform: scale(1.1);
+}
+
+/* Logo with Background Square */
+.logo-square {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.logo-square:hover {
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-square img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+    transition: all 0.2s ease;
+}
+
+.logo-square:hover img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-container {
+        gap: 8px;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .logo-img-small {
+        width: 36px;
+        height: 36px;
+    }
+
+    .logo-img-large {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-circle,
+    .logo-square {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-circle img,
+    .logo-square img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .logo-img {
+        background: rgba(30, 41, 59, 0.5);
+        filter: brightness(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    }
+
+    .logo-img:hover {
+        filter: brightness(1.05) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    }
+
+    .logo-text {
+        color: #f8fafc;
+    }
+
+    .logo-text:hover {
+        color: #e2e8f0;
+    }
+
+    .logo-img-small {
+        background: rgba(30, 41, 59, 0.5);
+        filter: brightness(1.1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .logo-img-large {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        filter: brightness(1.1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    }
+
+    .logo-circle {
+        background: #1e293b;
+        border-color: #334155;
+    }
+
+    .logo-circle:hover {
+        border-color: #475569;
+    }
+
+    .logo-square {
+        background: #1e293b;
+        border-color: #334155;
+    }
+
+    .logo-square:hover {
+        background: #0f172a;
+        border-color: #475569;
+    }
+}

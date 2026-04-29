@@ -1,0 +1,310 @@
+/* ── ADD USER PAGE ────────────────────────────────────── */
+
+:root {
+    --v50: #EEEDFE;
+    --v100: #CECBF6;
+    --v200: #AFA9EC;
+    --v400: #7F77DD;
+    --v600: #534AB7;
+    --v800: #3C3489;
+    --v900: #26215C;
+    --sidebar-width: 240px;
+    --navbar-height: 64px;
+}
+
+/* ── Layout ── */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f4fb;
+}
+
+.content {
+    margin-left: var(--sidebar-width);
+    padding-top: var(--navbar-height);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.page-body-add-user-page {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 780px;
+}
+
+/* ── Header ── */
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--v900);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 1.2em;
+    border-radius: 4px;
+    background: var(--v400);
+    flex-shrink: 0;
+}
+
+/* ── Card formulaire ── */
+.form-card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid rgba(83, 74, 183, 0.1);
+    box-shadow: 0 2px 20px rgba(38, 33, 92, 0.07);
+    overflow: hidden;
+}
+
+.form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(83, 74, 183, 0.08);
+    background: var(--v50);
+}
+
+.form-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--v100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.form-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--v800);
+    margin: 0 0 2px;
+}
+
+.form-card-sub {
+    font-size: 0.8rem;
+    color: var(--v400);
+    margin: 0;
+}
+
+/* ── Formulaire ── */
+.form {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+/* Ligne 2 colonnes */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Groupe champ ── */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--v800);
+    letter-spacing: 0.02em;
+}
+
+/* ── Inputs ── */
+.input,
+.select {
+    height: 42px;
+    padding: 0 1rem;
+    border: 1.5px solid rgba(83, 74, 183, 0.18);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: #2a2a3a;
+    background: #fafafa;
+    outline: none;
+    transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: var(--v200);
+    font-size: 0.82rem;
+}
+
+.input:focus,
+.select:focus {
+    border-color: var(--v400);
+    box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.13);
+    background: #fff;
+}
+
+.select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237F77DD' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 2.2rem;
+    cursor: pointer;
+}
+
+/* ── Notice email ── */
+.email-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--v50);
+    border: 1.5px solid var(--v100);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+    color: var(--v800);
+    line-height: 1.5;
+}
+
+.email-notice-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.email-notice strong {
+    color: var(--v600);
+}
+
+/* ── Boutons ── */
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 0.5rem;
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--v600);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.1s, box-shadow 0.18s;
+    box-shadow: 0 3px 12px rgba(83, 74, 183, 0.3);
+}
+
+.btn-submit:hover {
+    background: var(--v800);
+    box-shadow: 0 4px 16px rgba(83, 74, 183, 0.4);
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+}
+
+.btn-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-annuler {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    color: #666;
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-annuler:hover {
+    background: #f5f4fb;
+    border-color: var(--v200);
+    color: var(--v800);
+}
+
+.btn-annuler:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ── Spinner ── */
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+
+    .page-body {
+        padding: 1.25rem 1rem;
+        max-width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-submit,
+    .btn-annuler {
+        width: 100%;
+        justify-content: center;
+    }
+}

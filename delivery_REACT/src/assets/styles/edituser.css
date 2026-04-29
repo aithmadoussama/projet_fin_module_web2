@@ -1,0 +1,128 @@
+/* ───── CONTENEUR PAGE ───── */
+.edit-livraison-page {
+    padding: 2rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ───── TITRE ───── */
+.edit-livraison-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c2c54;
+}
+
+/* ───── FORMULAIRE ───── */
+.edit-livraison-form {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* ───── GROUPE ───── */
+.edit-livraison-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ───── LABEL ───── */
+.edit-livraison-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* ───── INPUT & SELECT ───── */
+.edit-livraison-input,
+.edit-livraison-select {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.edit-livraison-input:focus,
+.edit-livraison-select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+/* ───── ACTIONS ───── */
+.edit-livraison-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ───── BOUTON SUBMIT ───── */
+.edit-livraison-submit {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.edit-livraison-submit:hover {
+    background: #574fd6;
+}
+
+.edit-livraison-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ───── BOUTON ANNULER ───── */
+.edit-livraison-cancel {
+    background: #eee;
+    border: none;
+    padding: 0.5rem 1.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-livraison-cancel:hover {
+    background: #ddd;
+}
+
+/* ───── MESSAGE ERREUR ───── */
+.edit-livraison-error {
+    background: #ffe6e6;
+    color: #c0392b;
+    padding: 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* ───── MESSAGE GLOBAL (inchangé) ───── */
+.message-box {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.message-box.success {
+    background: #e6ffed;
+    color: #1a7f37;
+    border: 1px solid #1a7f37;
+}
+
+.message-box.error {
+    background: #ffe6e6;
+    color: #b00020;
+    border: 1px solid #b00020;
+}

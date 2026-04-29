@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/bg_badge_statut.xml -->
+<!-- Badge par défaut : violet (En cours) -->
+<!-- Changez la couleur dynamiquement dans le code Java/Kotlin selon le statut -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#EDE9FE" />
+    <corners android:radius="20dp" />
+</shape>

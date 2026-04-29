@@ -1,0 +1,164 @@
+/* ── NAVBAR ─────────────────────────────────────────── */
+
+:root {
+    --violet-50: #EEEDFE;
+    --violet-100: #CECBF6;
+    --violet-200: #AFA9EC;
+    --violet-400: #7F77DD;
+    --violet-600: #534AB7;
+    --violet-800: #3C3489;
+    --violet-900: #26215C;
+
+    --sidebar-width: 240px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid rgba(83, 74, 183, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.75rem;
+    z-index: 90;
+    box-shadow: 0 2px 16px rgba(38, 33, 92, 0.06);
+}
+
+/* ── Logo (affiché uniquement si pas de sidebar) ── */
+.navbar-logo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--violet-800);
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    display: none;
+    /* masqué par défaut — la sidebar porte déjà le logo */
+}
+
+/* ── Search ── */
+.navbar-search {
+    flex: 1;
+    max-width: 420px;
+}
+
+.navbar-search input {
+    width: 100%;
+    height: 38px;
+    padding: 0 1rem 0 2.5rem;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: #333;
+    background: var(--violet-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237F77DD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") no-repeat 0.8rem center;
+    outline: none;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    box-sizing: border-box;
+}
+
+.navbar-search input::placeholder {
+    color: var(--violet-400);
+    opacity: 0.8;
+}
+
+.navbar-search input:focus {
+    border-color: var(--violet-400);
+    box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+    background-color: #fff;
+}
+
+/* ── Actions (partie droite) ── */
+.navbar-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+/* ── Nom admin ── */
+.navbar-actions>span,
+.navbar-actions>p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--violet-800);
+}
+
+/* ── Icône notif ── */
+.navbar-actions .icon {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--violet-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.18s;
+    border: 1.5px solid rgba(83, 74, 183, 0.12);
+}
+
+.navbar-actions .icon:hover {
+    background: var(--violet-100);
+}
+
+/* Badge rouge */
+.navbar-actions .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #E24B4A;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 17px;
+    height: 17px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3px;
+    border: 2px solid #fff;
+    line-height: 1;
+}
+
+/* ── Nom affiché ── */
+.navbar-username {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--violet-800);
+}
+
+/* ── Photo profil ── */
+.navbar-actions .profile {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2.5px solid var(--violet-400);
+    cursor: pointer;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    flex-shrink: 0;
+}
+
+.navbar-actions .profile:hover {
+    border-color: var(--violet-600);
+    box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.2);
+}
+
+.navbar-actions .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Décalage du contenu principal ── */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding-top: 64px;
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topAppBar"
+    android:layout_width="0dp"
+    android:layout_height="64dp"
+    android:background="@drawable/bg_toolbar_gradient"
+    android:elevation="0dp"
+    app:titleCentered="true"
+    app:titleTextColor="#FFFFFF"
+    app:subtitleCentered="true"
+    app:subtitleTextColor="#DDD6FE"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/icon"
+            android:background="@drawable/bg_toolbar_icon"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar_title_text"
+                android:text="Title"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:letterSpacing="0.02" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Campus Delivery"
+                android:textColor="#DDD6FE"
+                android:textSize="11sp"
+                android:letterSpacing="0.04" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.appbar.MaterialToolbar>

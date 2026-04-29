@@ -1,0 +1,245 @@
+/* ───────────────── ROOT ───────────────── */
+:root {
+    --v50: #EEEDFE;
+    --v100: #CECBF6;
+    --v200: #AFA9EC;
+    --v400: #7F77DD;
+    --v600: #534AB7;
+    --v800: #3C3489;
+    --v900: #26215C;
+}
+
+/* ───────────────── PAGE ───────────────── */
+.addresses-page {
+    min-height: 100vh;
+    background: #f5f4fb;
+}
+
+/* ───────────────── CONTENT ───────────────── */
+.addresses-content {
+    margin-left: 240px;
+    padding-top: 64px;
+}
+
+.addresses-body {
+    padding: 2rem;
+}
+
+/* ───────────────── TITLE ───────────────── */
+.addresses-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--v900);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.addresses-title::before {
+    content: "";
+    width: 4px;
+    height: 1.2em;
+    background: var(--v400);
+    border-radius: 4px;
+}
+
+/* ───────────────── TABLE WRAPPER ───────────────── */
+.addresses-table-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(83, 74, 183, 0.1);
+    box-shadow: 0 2px 16px rgba(38, 33, 92, 0.06);
+    overflow-x: auto;
+}
+
+/* ───────────────── TABLE ───────────────── */
+.addresses-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.addresses-table thead {
+    background: #3a3a4a;
+}
+
+.addresses-table th {
+    padding: 0.9rem 1.25rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.addresses-table td {
+    padding: 0.85rem 1.25rem;
+    color: #3a3a4a;
+}
+
+/* ROW */
+.addresses-table tbody tr {
+    border-bottom: 1px solid rgba(83, 74, 183, 0.07);
+    transition: 0.15s;
+}
+
+.addresses-table tbody tr:hover {
+    background: #faf9ff;
+}
+
+/* ───────────────── ADDRESS CELL ───────────────── */
+.addresses-text {
+    color: #555;
+    font-size: 0.85rem;
+}
+
+.addresses-city {
+    color: #6b7280;
+    font-size: 0.82rem;
+}
+
+/* ───────────────── ACTIONS ───────────────── */
+.addresses-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ───────────────── BUTTONS ───────────────── */
+.addresses-btn {
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* EDIT */
+.addresses-btn-edit {
+    background: var(--v50);
+    color: var(--v600);
+    border: 1.5px solid var(--v100);
+}
+
+.addresses-btn-edit:hover {
+    background: var(--v100);
+    color: var(--v800);
+}
+
+/* DELETE */
+.addresses-btn-delete {
+    background: #FCEBEB;
+    color: #A32D2D;
+    border: 1.5px solid #F7C1C1;
+}
+
+.addresses-btn-delete:hover {
+    background: #F7C1C1;
+}
+
+/* ───────────────── EMPTY ───────────────── */
+.addresses-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--v200);
+}
+
+/* ───── FILTRES ───── */
+.addresses-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* SEARCH */
+.addresses-search {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.addresses-search:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+/* SELECT */
+.addresses-select {
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    border: 1.5px solid #ddd;
+    outline: none;
+    font-size: 0.9rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+.addresses-select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+/* ───────────────── SEARCH ───────────────── */
+.addresses-search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.addresses-search-icon {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--v200);
+    pointer-events: none;
+}
+
+.addresses-search {
+    width: 100%;
+    padding: 0.5rem 0.9rem 0.5rem 2.25rem;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    border-radius: 9px;
+    background: #fff;
+    font-size: 0.875rem;
+    color: var(--v900);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.addresses-search:focus {
+    border-color: var(--v400);
+    box-shadow: 0 0 0 2px rgba(127, 119, 221, 0.15);
+}
+
+.addresses-search::placeholder {
+    color: var(--v200);
+}
+
+/* ───────────────── SELECT VILLE ───────────────── */
+.addresses-select {
+    height: 38px;
+    padding: 0 2rem 0 0.9rem;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    border-radius: 9px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23AFA9EC' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    appearance: none;
+    font-size: 0.875rem;
+    color: var(--v900);
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    min-width: 180px;
+}
+
+.addresses-select:focus {
+    border-color: var(--v400);
+    box-shadow: 0 0 0 2px rgba(127, 119, 221, 0.15);
+}

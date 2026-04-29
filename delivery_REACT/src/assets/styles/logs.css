@@ -1,0 +1,364 @@
+/* ───────────────── ROOT ───────────────── */
+:root {
+    --v50: #EEEDFE;
+    --v100: #CECBF6;
+    --v200: #AFA9EC;
+    --v400: #7F77DD;
+    --v600: #534AB7;
+    --v800: #3C3489;
+    --v900: #26215C;
+
+    --sidebar-width: 240px;
+    --navbar-height: 64px;
+}
+
+/* ───────────────── LAYOUT ───────────────── */
+.logs-page {
+    display: block;
+    min-height: 100vh;
+    background: #f5f4fb;
+}
+
+.logs-content {
+    margin-left: var(--sidebar-width);
+    padding-top: var(--navbar-height);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logs-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ───────────────── HEADER ───────────────── */
+.logs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logs-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--v900);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.logs-title::before {
+    content: "";
+    width: 4px;
+    height: 1.2em;
+    background: var(--v400);
+    border-radius: 4px;
+}
+
+/* ───────────────── FILTERS ───────────────── */
+.logs-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.logs-search-wrap {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.logs-search-icon {
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--v200);
+    pointer-events: none;
+}
+
+.logs-search {
+    width: 100%;
+    padding: 0.5rem 0.9rem 0.5rem 2.25rem;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    border-radius: 9px;
+    background: #fff;
+    font-size: 0.875rem;
+    color: var(--v900);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.logs-search:focus {
+    border-color: var(--v400);
+}
+
+.logs-search::placeholder {
+    color: var(--v200);
+}
+
+/* ───────────────── DATE INPUT ───────────────── */
+.logs-date-input {
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 9px;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    font-size: 0.875rem;
+    color: var(--v900);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+
+.logs-date-input:focus {
+    border-color: var(--v400);
+    box-shadow: 0 0 0 2px rgba(127, 119, 221, 0.15);
+}
+
+/* ───────────────── FILTER TABS ───────────────── */
+.logs-filter-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.logs-filter-tab {
+    padding: 0.42rem 0.9rem;
+    border-radius: 8px;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    background: #fff;
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+    white-space: nowrap;
+}
+
+.logs-filter-tab:hover {
+    background: var(--v50);
+    color: var(--v600);
+    border-color: var(--v100);
+}
+
+.logs-filter-tab.active {
+    background: var(--v50);
+    color: var(--v600);
+    border-color: var(--v400);
+}
+
+/* ───────────────── RESET BUTTON ───────────────── */
+.logs-reset-btn {
+    padding: 0.42rem 0.9rem;
+    border-radius: 8px;
+    border: 1.5px solid rgba(83, 74, 183, 0.15);
+    background: #fff;
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s;
+    white-space: nowrap;
+}
+
+.logs-reset-btn:hover {
+    background: var(--v50);
+    color: var(--v600);
+    border-color: var(--v100);
+}
+
+/* ───────────────── COUNTER ───────────────── */
+.logs-count {
+    font-size: 0.82rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+/* ───────────────── TABLE WRAPPER ───────────────── */
+.logs-table-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(83, 74, 183, 0.1);
+    box-shadow: 0 2px 16px rgba(38, 33, 92, 0.06);
+    overflow-x: auto;
+}
+
+/* ───────────────── TABLE ───────────────── */
+.logs-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.logs-table thead {
+    background: #3a3a4a;
+}
+
+.logs-table th {
+    padding: 0.9rem 1.25rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.logs-table td {
+    padding: 0.85rem 1.25rem;
+    color: #3a3a4a;
+    white-space: nowrap;
+}
+
+.logs-table tbody tr {
+    border-bottom: 1px solid rgba(83, 74, 183, 0.07);
+    transition: 0.15s;
+}
+
+.logs-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.logs-table tbody tr:hover {
+    background: #faf9ff;
+}
+
+/* ───────────────── PERSON CELL ───────────────── */
+.logs-client-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logs-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--v100);
+    color: var(--v800);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.logs-client-name {
+    font-weight: 500;
+    color: #3a3a4a;
+}
+
+.logs-client-email {
+    color: #6b7280;
+    font-size: 0.82rem;
+}
+
+/* ───────────────── STATUS BADGE ───────────────── */
+.logs-status {
+    display: inline-flex;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.logs-status--Créé {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.logs-status--Prise_en_charge {
+    background: #dddbd6;
+    color: #92400e;
+}
+
+.logs-status--En_route {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.logs-status--Livrée {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.logs-status--Annulée {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* ───────────────── EMPTY / LOADING ───────────────── */
+.logs-empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--v200);
+    font-size: 0.9rem;
+}
+
+.logs-loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--v400);
+    font-size: 0.9rem;
+}
+
+.logs-spinner {
+    width: 34px;
+    height: 34px;
+    border: 3px solid var(--v100);
+    border-top-color: var(--v600);
+    border-radius: 50%;
+    animation: logs-spin 0.8s linear infinite;
+    margin: 0 auto 0.75rem;
+}
+
+@keyframes logs-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ───────────────── FOOTER ───────────────── */
+.logs-footer {
+    font-size: 0.78rem;
+    color: #9ca3af;
+    text-align: right;
+    padding-top: 0.25rem;
+}
+
+/* ───────────────── RESPONSIVE ───────────────── */
+@media (max-width: 768px) {
+    .logs-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logs-filter-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+    }
+
+    .logs-count {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .logs-body {
+        padding: 1rem;
+    }
+}

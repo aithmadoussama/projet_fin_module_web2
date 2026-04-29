@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CampusDelivery</string>
+    <string name="campusdelivery">CampusDelivery</string>
+    <string name="nom_utilisateur">Nom utilisateur</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="mot_de_passe_oubli">Mot de passe oublié ?</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="vous_n_avez_pas_de_compte_cr_er_un">Vous n\'avez pas de compte ? Créer un</string>
+    <string name="email">email</string>
+    <string name="hello_client">hello client</string>
+    <string name="profil">Profil</string>
+    <string name="connectez_vous">connectez_vous</string>
+    <string name="toolbar_subtitle">Bienvenue sur CampusDelivery</string>
+</resources>

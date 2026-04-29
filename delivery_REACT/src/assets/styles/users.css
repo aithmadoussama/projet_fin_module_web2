@@ -1,0 +1,392 @@
+/* ───────────────── ROOT ───────────────── */
+:root {
+    --v50: #EEEDFE;
+    --v100: #CECBF6;
+    --v200: #AFA9EC;
+    --v400: #7F77DD;
+    --v600: #534AB7;
+    --v800: #3C3489;
+    --v900: #26215C;
+
+    --sidebar-width: 240px;
+    --navbar-height: 64px;
+}
+
+/* ───────────────── LAYOUT ───────────────── */
+.users-page {
+    display: block;
+    min-height: 100vh;
+    background: #f5f4fb;
+}
+
+.users-content {
+    margin-left: var(--sidebar-width);
+    padding-top: var(--navbar-height);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.users-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* ───────────────── HEADER ───────────────── */
+.users-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.users-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--v900);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.users-title::before {
+    content: "";
+    width: 4px;
+    height: 1.2em;
+    background: var(--v400);
+    border-radius: 4px;
+}
+
+/* ───────────────── BUTTON ───────────────── */
+.users-add-btn {
+    background: var(--v600);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(83, 74, 183, 0.3);
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.users-add-btn:hover {
+    background: var(--v800);
+}
+
+/* ───────────────── TABLE WRAPPER ───────────────── */
+.users-table-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(83, 74, 183, 0.1);
+    box-shadow: 0 2px 16px rgba(38, 33, 92, 0.06);
+
+    /* 🔥 FIX IMPORTANT */
+    overflow-x: auto;
+}
+
+/* ───────────────── TABLE ───────────────── */
+.users-table {
+    width: 100%;
+    min-width: 900px;
+    /* 🔥 empêche casse layout */
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.users-table thead {
+    background: #3a3a4a;
+}
+
+.users-table th {
+    padding: 0.9rem 1.25rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.users-table td {
+    padding: 0.85rem 1.25rem;
+    color: #3a3a4a;
+    white-space: nowrap;
+}
+
+.users-table tbody tr {
+    border-bottom: 1px solid rgba(83, 74, 183, 0.07);
+    transition: 0.15s;
+}
+
+.users-table tbody tr:hover {
+    background: #faf9ff;
+}
+
+/* ───────────────── USER CELL ───────────────── */
+.users-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.users-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--v100);
+    color: var(--v800);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.users-name {
+    font-weight: 500;
+}
+
+/* ───────────────── EMAIL ───────────────── */
+.users-email {
+    color: #555;
+    font-size: 0.85rem;
+}
+
+/* ───────────────── ROLE BADGE ───────────────── */
+.users-role {
+    display: inline-flex;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.users-role--admin {
+    background: var(--v50);
+    color: var(--v800);
+}
+
+.users-role--livreur {
+    background: #EAF3DE;
+    color: #3B6D11;
+}
+
+.users-role--client {
+    background: #FAEEDA;
+    color: #854F0B;
+}
+
+/* ───────────────── ACTIONS ───────────────── */
+.users-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 150px;
+}
+
+/* ───────────────── BUTTONS ───────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.38rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.15s;
+    white-space: nowrap;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn-edit {
+    background: var(--v50);
+    color: var(--v600);
+    border: 1.5px solid var(--v100);
+}
+
+.btn-edit:hover {
+    background: var(--v100);
+    color: var(--v800);
+}
+
+.btn-delete {
+    background: #FCEBEB;
+    color: #A32D2D;
+    border: 1.5px solid #F7C1C1;
+}
+
+.btn-delete:hover {
+    background: #F7C1C1;
+}
+
+/* ───────────────── EMPTY STATE ───────────────── */
+.users-empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--v200);
+}
+
+/* ───────────────── RESPONSIVE ───────────────── */
+@media (max-width: 768px) {
+
+    .users-content {
+        margin-left: 0;
+    }
+
+    .users-body {
+        padding: 1.25rem;
+    }
+
+    .users-table {
+        min-width: 750px;
+    }
+
+    .users-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ───────────────── BASE BUTTON ───────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0.38rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+}
+
+/* ───────────────── ACTIVER ───────────────── */
+.btn-activate {
+    background: #EAF3DE;
+    color: #2E6B1F;
+    border: 1.5px solid #BFE3A8;
+}
+
+.btn-activate:hover {
+    background: #D9F2C7;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(46, 107, 31, 0.15);
+}
+
+/* ───────────────── DESACTIVER ───────────────── */
+.btn-deactivate {
+    background: #FCEBEB;
+    color: #A32D2D;
+    border: 1.5px solid #F7C1C1;
+}
+
+.btn-deactivate:hover {
+    background: #F7C1C1;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(163, 45, 45, 0.15);
+}
+
+/* ───────────────── ACTIVE CLICK EFFECT ───────────────── */
+.btn:active {
+    transform: scale(0.96);
+}
+
+.users-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+/* Cas ACTIF */
+.users-status.Actif {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+/* Cas BLOQUÉ */
+.users-status.Bloqué {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* .btn-users-Actif {
+    background-color: #ef4444;
+}
+
+.btn-users-Actif:hover {
+    background-color: #dc2626;
+}
+
+.btn-users-Bloqué {
+    background-color: #22c55e;
+}
+
+.btn-users-Bloqué:hover {
+    background-color: #16a34a;
+} */
+
+/* ───────── BASE BUTTON ───────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0.38rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+/* ───────── BOUTON BLOQUER (deactivate) ───────── */
+.btn-deactivate {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1.5px solid #f7c1c1;
+}
+
+.btn-deactivate:hover {
+    background-color: #fecaca;
+    box-shadow: 0 3px 10px rgba(153, 27, 27, 0.15);
+}
+
+/* ───────── BOUTON ACTIVER ───────── */
+.btn-activate {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1.5px solid #bbf7d0;
+}
+
+.btn-activate:hover {
+    background-color: #a7f3d0;
+    box-shadow: 0 3px 10px rgba(6, 95, 70, 0.15);
+}
